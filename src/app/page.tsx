@@ -1,100 +1,78 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <header className="bg-[#0F52BA] h-16 flex justify-center items-center p-10">
+        <Image src="/logo.svg" alt="Logo da ONG" width={159} height={30} />
+      </header>
+      <main>
+        {/* Primeira Seção */}
+        <div className="bg-[#0F52BA]">
+          <Image
+            src="/Group.png"
+            alt="Fram Image"
+            layout="responsive"
+            width={100}
+            height={150}
+            className="pt-10"
+          />
+          <div className="p-10">
+            <p className="text-4xl font-bold mt-4 text-white">
+              Conecte <br />
+              pessoas <br />
+              <span className="text-blue-300">
+                interessadas <br /> em sua startup
+              </span>
+            </p>
+            {/* Link para o grupo */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSehoBhY3W4Bq3YM3BVlHb-HE2Nmb-xKPKlMhzGOeiitsDuUwQ/viewform?usp=sf_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mr-6 mt-6 bg-blue-300 text-purple-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-400 mb-5"
+            >
+              Participe conosco
+            </a>
+          </div>
+        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* Segunda Seção */}
+        <div className="flex items-center justify-center bg-blue-200">
+          <main className="text-center">
+            <p className="text-purple-900 text-2xl font-semibold mb-6 mt-5">
+              Nós facilitamos a <br />
+              visibilidade da sua <br />
+              startup para talentos de <br />
+              todos cantos de Pelotas.
+            </p>
+            <div className="flex justify-center">
+              <Image
+                src="/ilustration.svg"
+                alt="Ilustração"
+                width={200}
+                height={200}
+                className="mb-5"
+              />
+            </div>
+          </main>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Rodapé */}
+      <footer className="bg-blue-700 text-white py-8 text-center">
+        <nav className="mb-4 flex justify-center space-x-8">
+          <a href="#" className="hover:underline">
+            Home
+          </a>
+          <a href="#" className="hover:underline">
+            Nexus For Workers
+          </a>
+          <a href="#" className="hover:underline flex items-center">
+            Instagram
+          </a>
+        </nav>
+        <p className="text-sm">@Nexus 2024</p>
       </footer>
     </div>
   );
