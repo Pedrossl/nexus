@@ -68,7 +68,10 @@ export default function Page() {
           <a href="#" className="hover:underline">
             Nexus For Workers
           </a>
-          <a href="#" className="hover:underline flex items-center">
+          <a
+            href="https://www.instagram.com/meu.nexus?igsh=MXIyemVndm9rZTFibA=="
+            className="hover:underline flex items-center"
+          >
             Instagram
           </a>
         </nav>
